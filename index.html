@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1020" />
+  <meta name="description" content="A student-friendly resource hub for ISC-S101 Programming & Computing (C & UNIX), B.Tech CSE." />
+  <title>ISC Course Hub — B.Tech CSE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="ISC Course Hub home"><span class="brand-mark">i<span>•</span></span><span>ISC<span class="brand-muted"> / COURSE HUB</span></span></a>
+    <nav class="nav-links" aria-label="Main navigation"><a href="#materials">Materials</a><a href="#roadmap">Course map</a><a href="#about">About</a></nav>
+    <a class="top-cta" href="#materials">Explore resources <span>↗</span></a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </header>
+  <main id="home">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> YOUR SEMESTER, ORGANIZED</div>
+        <h1>Learn the logic.<br><span>Build the skill.</span></h1>
+        <p class="hero-lead">One calm, organized space for your ISC course — lecture notes, lab assignments, syllabus and class work, all a click away.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#materials">Browse materials <span>↓</span></a><a class="button button-quiet" href="#roadmap">View course map <span>↗</span></a></div>
+        <div class="hero-note"><div class="avatar-stack"><span>C</span><span>{ }</span><span>⌘</span></div><span>Made for curious B.Tech CSE students</span></div>
+      </div>
+      <div class="hero-art" aria-label="Course dashboard preview">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="code-window"><div class="window-top"><div class="window-dots"><i></i><i></i><i></i></div><span>hello.c</span><span class="window-lang">C</span></div>
+          <div class="code-lines"><div><b>01</b><span class="code-purple">#include</span> <span class="code-green">&lt;stdio.h&gt;</span></div><div><b>02</b></div><div><b>03</b><span class="code-blue">int</span> main(<span class="code-blue">void</span>) {'{'}</div><div><b>04</b> &nbsp;&nbsp;printf(<span class="code-yellow">"Hello, future!\n"</span>);</div><div><b>05</b> &nbsp;&nbsp;<span class="code-purple">return</span> <span class="code-orange">0</span>;</div><div><b>06</b>{'}'}</div></div>
+          <div class="code-footer"><span><i></i> Ready to compile</span><span>gcc · C</span></div>
+        </div>
+        <div class="float-card float-card-top"><span class="float-icon icon-purple">▤</span><div><strong>Course materials</strong><small>All in one place</small></div><span class="float-check">✓</span></div>
+        <div class="float-card float-card-bottom"><span class="float-icon icon-green">⌘</span><div><strong>Practice mode</strong><small>Learn by doing</small></div><span class="mini-bars"><i></i><i></i><i></i><i></i><i></i></span></div>
+        <div class="sparkle sparkle-one">✳</div><div class="sparkle sparkle-two">✦</div>
+      </div>
+      <div class="hero-bottom"><span>ISC–S101</span><span class="hero-bottom-line"></span><span>PROGRAMMING & COMPUTING (C & UNIX)</span><span class="hero-bottom-year">B.TECH · CSE</span></div>
+    </section>
+    <section class="stats wrap" aria-label="Resource overview">
+      <div class="stat"><span class="stat-number" id="total-count">12</span><span class="stat-label">Resources included</span></div>
+      <div class="stat"><span class="stat-number">04</span><span class="stat-label">Learning collections</span></div>
+      <div class="stat"><span class="stat-number">PDF</span><span class="stat-label">Easy to read & download</span></div>
+      <div class="stat stat-message"><span class="stat-spark">✳</span><span>Less searching.<br><strong>More learning.</strong></span></div>
+    </section>
+    <section id="materials" class="materials-section wrap">
+      <div class="section-heading"><div><div class="eyebrow eyebrow-light">THE RESOURCE LIBRARY</div><h2>Everything you need,<br><span>within reach.</span></h2></div><p>Find the right resource, preview it in your browser, or download it for offline study.</p></div>
+      <div class="library-toolbar"><div class="tabs" role="tablist" aria-label="Filter materials"><button class="tab active" data-category="all" role="tab" aria-selected="true">All resources <span id="all-tab-count">12</span></button><button class="tab" data-category="syllabus" role="tab" aria-selected="false">Syllabus</button><button class="tab" data-category="lab-assignments" role="tab" aria-selected="false">Lab assignments</button><button class="tab" data-category="class-assignments" role="tab" aria-selected="false">Class work</button><button class="tab" data-category="lecture-materials" role="tab" aria-selected="false">Lecture materials</button></div>
+        <label class="search-box"><span>⌕</span><input id="search-input" type="search" placeholder="Search resources..." aria-label="Search resources"><kbd>⌘ K</kbd></label></div>
+      <div class="results-line"><span id="results-label">Showing all resources</span><span class="sort-label">PDF DOCUMENTS <span>↘</span></span></div>
+      <div class="resource-grid" id="resource-grid" aria-live="polite"></div>
+      <div id="empty-state" class="empty-state" hidden><span>⌕</span><h3>No resources found</h3><p>Try another search term or choose a different collection.</p><button class="button button-quiet" id="reset-search">Clear filters</button></div>
+      <div class="library-footer"><span><span class="live-dot"></span> Resources are stored with this website</span><span>Need to add a PDF? See the setup guide ↓</span></div>
+    </section>
+    <section id="roadmap" class="roadmap-section wrap"><div class="section-heading"><div><div class="eyebrow eyebrow-light">YOUR LEARNING PATH</div><h2>A little structure.<br><span>A lot more progress.</span></h2></div><p>Use these collections as a simple guide through the course. Follow your instructor's schedule first.</p></div>
+      <div class="roadmap-grid"><article class="roadmap-card"><div class="roadmap-num">01</div><div class="roadmap-icon purple-bg">▤</div><h3>Know the course</h3><p>Start with the syllabus to understand the scope, outcomes and key topics.</p><button data-jump="syllabus" class="text-link">Open syllabus <span>↗</span></button></article><article class="roadmap-card"><div class="roadmap-num">02</div><div class="roadmap-icon blue-bg">⌘</div><h3>Learn the concepts</h3><p>Use the lecture resources to revise Unix commands, C basics and operator precedence.</p><button data-jump="lecture-materials" class="text-link">Explore lectures <span>↗</span></button></article><article class="roadmap-card"><div class="roadmap-num">03</div><div class="roadmap-icon green-bg">{ }</div><h3>Practice in the lab</h3><p>Work through each lab sheet and compile your own solutions as you go.</p><button data-jump="lab-assignments" class="text-link">Practice now <span>↗</span></button></article><article class="roadmap-card"><div class="roadmap-num">04</div><div class="roadmap-icon orange-bg">✎</div><h3>Revise & prepare</h3><p>Keep class assignments and the provided mid-semester paper handy for revision.</p><button data-jump="class-assignments" class="text-link">Review class work <span>↗</span></button></article></div>
+    </section>
+    <section id="about" class="about-section wrap"><div class="about-panel"><div class="about-left"><div class="eyebrow">BUILT FOR YOUR COURSE</div><h2>One hub.<br><span>Clear head.</span></h2><p>A student-friendly companion for ISC–S101: Programming & Computing (C & UNIX). Materials supplied for this site are grouped by purpose so they're easier to find and revisit.</p><div class="about-tags"><span>✦ Student-first</span><span>↗ Quick access</span><span>▤ PDF library</span></div></div><div class="about-right"><div class="big-bracket">{<span>;</span>}</div><div class="about-mini"><span>COURSE CODE</span><strong>ISC–S101</strong><span>SUBJECT</span><strong>Programming & Computing</strong><span>FOCUS</span><strong>C Language · Unix/Linux</strong></div></div></div></section>
+  </main>
+  <footer class="footer wrap"><a class="brand" href="#home"><span class="brand-mark">i<span>•</span></span><span>ISC<span class="brand-muted"> / COURSE HUB</span></span></a><span>Built to make studying feel a little simpler.</span><a href="#home" class="back-top">Back to top ↑</a></footer>
+  <script src="materials.js"></script><script src="app.js"></script>
+</body></html>
